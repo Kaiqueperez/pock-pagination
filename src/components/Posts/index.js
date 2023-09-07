@@ -1,11 +1,11 @@
-export const Photos = ({ loading, posts, typeOfPagination }) => {
+export const Photos = ({ loading, posts, typeOfPagination, filtradedList }) => {
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return typeOfPagination === "photos" ? (
     <ul>
-      {posts.map((post) => {
+      {filtradedList.map((post) => {
         return (
           <li key={post.id}>
             <p>{post.title}</p>
